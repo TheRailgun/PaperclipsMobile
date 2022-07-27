@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="left_margin">16dp</dimen>
+    <dimen name="left_margin_small">6dp</dimen>
+    <dimen name="top_margin">30dp</dimen>
+    <dimen name="top_margin_button_text">50dp</dimen>
+    <dimen name="top_margin_small">8dp</dimen>
+    <dimen name="font_size_small">16sp</dimen>
+    <dimen name="font_size_big">28sp</dimen>
+    <dimen name="font_size_title">36sp</dimen>
+    <dimen name="button_small">50dp</dimen>
+    <dimen name="button_small_height">35dp</dimen>
+</resources>

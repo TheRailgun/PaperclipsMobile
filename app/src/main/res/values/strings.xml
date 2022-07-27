@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Paperclips</string>
+    <string name="price_per_clip">Price per clip:</string>
+    <string name="available_funds">Available Funds:</string>
+    <string name="business">Business</string>
+    <string name="manufacturing">Manufacturing</string>
+    <string name="lower">-</string>
+    <string name="raise">+</string>
+    <string name="unsold_inventory">Unsold Inventory:</string>
+    <string name="public_demand">Public Demand:</string>
+    <string name="cost">Cost:</string>
+    <string name="wire">Wire</string>
+    <string name="inches">inches</string>
+    <string name="autoclippers">Autoclippers</string>
+    <string name="paperclips">Total Paperclips:</string>
+    <string name="make_paperclip">Make Paperclip</string>
+    <string name="marketing">Marketing</string>
+    <string name="level">Level:</string>
+</resources>

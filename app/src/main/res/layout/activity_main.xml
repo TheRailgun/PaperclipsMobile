@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/top_margin_small"
+        android:text="@string/paperclips"
+        android:gravity="center"
+        android:textSize="@dimen/font_size_title" />
+
+    <TextView
+        android:id="@+id/titleE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/top_margin_small"
+        android:layout_below="@+id/title"
+        android:text="10,000,000"
+        android:textSize="@dimen/font_size_title"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/titleB"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/button_small"
+        android:layout_below="@id/titleE"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/top_margin_small"
+        android:text="@string/make_paperclip"
+        android:onClick="makeClip"
+        android:textSize="@dimen/font_size_small" />
+
+    <TextView
+        android:id="@+id/business"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleB"
+        android:layout_marginStart="@dimen/left_margin"
+        android:layout_marginTop="@dimen/top_margin"
+        android:text="@string/business"
+        android:textSize="@dimen/font_size_big" />
+
+    <TextView
+        android:id="@+id/ppc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/business"
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="@dimen/left_margin"
+        android:layout_marginTop="@dimen/top_margin"
+        android:text="@string/price_per_clip" />
+
+    <TextView
+        android:id="@+id/ppcE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/business"
+        android:layout_marginStart="@dimen/left_margin_small"
+        android:layout_marginTop="@dimen/top_margin"
+        android:layout_toEndOf="@+id/ppc"
+        android:text="0.03"
+        android:textSize="@dimen/font_size_small"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/lower"
+        android:layout_width="@dimen/button_small"
+        android:layout_height="@dimen/button_small_height"
+        android:layout_below="@+id/business"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="@dimen/left_margin"
+        android:layout_marginTop="24dp"
+        android:layout_toEndOf="@+id/ppcE"
+        android:onClick="lower"
+        android:text="@string/lower"
+        android:textSize="@dimen/font_size_small" />
+
+    <Button
+        android:id="@+id/raise"
+        android:layout_width="@dimen/button_small"
+        android:layout_height="@dimen/button_small_height"
+        android:layout_below="@+id/business"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="@dimen/left_margin_small"
+        android:layout_marginTop="24dp"
+        android:layout_toEndOf="@+id/lower"
+        android:onClick="raise"
+        android:text="@string/raise"
+        android:textSize="@dimen/font_size_small" />
+
+    <TextView
+        android:id="@+id/funds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ppc"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="@dimen/left_margin"
+        android:layout_marginTop="@dimen/top_margin"
+        android:text="@string/available_funds"
+        android:textSize="@dimen/font_size_small" />
+
+    <TextView
+        android:id="@+id/fundsE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ppc"
+        android:layout_marginStart="@dimen/left_margin_small"
+        android:layout_marginTop="@dimen/top_margin"
+        android:layout_toEndOf="@+id/funds"
+        android:text="0.03"
+        android:textSize="@dimen/font_size_small"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/inven"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/funds"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="@dimen/left_margin"
+        android:layout_marginTop="@dimen/top_margin"
+        android:text="@string/unsold_inventory"
+        android:textSize="@dimen/font_size_small" />
+
+    <TextView
+        android:id="@+id/invenE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/funds"
+        android:layout_marginStart="@dimen/left_margin_small"
+        android:layout_marginTop="@dimen/top_margin"
+        android:layout_toEndOf="@+id/inven"
+        android:text="0"
+        android:textSize="@dimen/font_size_small" />
+
+    <TextView
+        android:id="@+id/pd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/inven"
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="@dimen/left_margin"
+        android:layout_marginTop="@dimen/top_margin"
+        android:text="@string/public_demand"
+        android:textSize="@dimen/font_size_small" />
+
+    <TextView
+        android:id="@+id/pdE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/inven"
+        android:layout_marginStart="@dimen/left_margin_small"
+        android:layout_marginTop="@dimen/top_margin"
+        android:layout_toEndOf="@+id/pd"
+        android:text="100%"
+        android:textSize="@dimen/font_size_small"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/marketingB"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/button_small"
+        android:layout_below="@+id/pd"
+        android:layout_marginStart="@dimen/left_margin"
+        android:layout_marginTop="@dimen/top_margin_small"
+        android:layout_toEndOf="@+id/marketinglvlE"
+        android:text="@string/marketing"
+        android:onClick="market"
+        android:textSize="@dimen/font_size_small" />
+
+    <TextView
+        android:id="@+id/marketingLvl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pd"
+        android:layout_marginStart="@dimen/left_margin"
+        android:layout_marginTop="@dimen/top_margin"
+        android:text="@string/level"
+        android:textSize="@dimen/font_size_small" />
+
+
+    <TextView
+        android:id="@+id/marketinglvlE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pd"
+        android:layout_marginStart="@dimen/left_margin"
+        android:layout_marginTop="@dimen/top_margin"
+        android:layout_toEndOf="@+id/marketingLvl"
+        android:text="1"
+        android:textSize="@dimen/font_size_small" />
+
+
+    <TextView
+        android:id="@+id/marketingCost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/marketingB"
+        android:layout_marginStart="@dimen/left_margin"
+        android:layout_marginTop="@dimen/top_margin_small"
+        android:text="@string/cost"
+        android:textSize="@dimen/font_size_small" />
+
+    <TextView
+        android:id="@+id/marketingCostE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/marketingB"
+        android:layout_marginStart="@dimen/left_margin_small"
+        android:layout_marginTop="@dimen/top_margin_small"
+        android:layout_toEndOf="@+id/marketingCost"
+        android:text="14"
+        android:textSize="@dimen/font_size_small" />
+
+
+    <TextView
+        android:id="@+id/manufacturing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/marketingCost"
+        android:layout_marginStart="@dimen/left_margin"
+        android:layout_marginTop="@dimen/top_margin"
+        android:text="@string/manufacturing"
+        android:textSize="@dimen/font_size_big" />
+
+    <Button
+        android:id="@+id/wireB"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/button_small"
+        android:layout_below="@+id/manufacturing"
+        android:layout_marginStart="@dimen/left_margin"
+        android:layout_marginTop="@dimen/top_margin"
+        android:text="@string/wire"
+        android:onClick="buyWire"
+        android:textSize="@dimen/font_size_small" />
+
+    <TextView
+        android:id="@+id/wireNumE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/manufacturing"
+        android:layout_marginStart="@dimen/left_margin"
+        android:layout_marginTop="@dimen/top_margin_button_text"
+        android:layout_toEndOf="@+id/wireB"
+        android:text="14"
+        android:textSize="@dimen/font_size_small" />
+
+    <TextView
+        android:id="@+id/wireNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/manufacturing"
+        android:layout_marginStart="@dimen/left_margin_small"
+        android:layout_marginTop="@dimen/top_margin_button_text"
+        android:layout_toEndOf="@+id/wireNumE"
+        android:text="@string/inches"
+        android:textSize="@dimen/font_size_small" />
+
+    <TextView
+        android:id="@+id/wireCost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/wireB"
+        android:layout_marginStart="@dimen/left_margin"
+        android:layout_marginTop="@dimen/top_margin_small"
+        android:text="@string/cost"
+        android:textSize="@dimen/font_size_small" />
+
+    <TextView
+        android:id="@+id/wireCostE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/wireB"
+        android:layout_marginStart="@dimen/left_margin_small"
+        android:layout_marginTop="@dimen/top_margin_small"
+        android:layout_toEndOf="@+id/wireCost"
+        android:text="14"
+        android:textSize="@dimen/font_size_small" />
+
+    <Button
+        android:id="@+id/acb"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/button_small"
+        android:layout_below="@+id/wireCost"
+        android:layout_marginStart="@dimen/left_margin"
+        android:layout_marginTop="@dimen/top_margin"
+        android:onClick="buyClipper"
+        android:text="@string/autoclippers"
+        android:textSize="@dimen/font_size_small" />
+
+    <TextView
+        android:id="@+id/acNumE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/wireCost"
+        android:layout_marginStart="@dimen/left_margin"
+        android:layout_marginTop="@dimen/top_margin_button_text"
+        android:layout_toEndOf="@+id/acb"
+        android:text="14"
+        android:textSize="@dimen/font_size_small" />
+
+    <TextView
+        android:id="@+id/acCost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/acb"
+        android:layout_marginStart="@dimen/left_margin"
+        android:layout_marginTop="@dimen/top_margin_small"
+        android:text="@string/cost"
+        android:textSize="@dimen/font_size_small" />
+
+    <TextView
+        android:id="@+id/acCostE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/acb"
+        android:layout_marginStart="@dimen/left_margin_small"
+        android:layout_marginTop="@dimen/top_margin_small"
+        android:layout_marginBottom="@dimen/top_margin"
+        android:layout_toEndOf="@+id/acCost"
+        android:text="14"
+        android:textSize="@dimen/font_size_small" />
+
+
+
+</RelativeLayout>
+    </LinearLayout>
+</ScrollView>
